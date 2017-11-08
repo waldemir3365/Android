@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="codigoqr.fiap.com.br.leitordecodigo.Main4Activity">
+
+
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="368dp"
+    android:layout_height="0dp"
+    tools:layout_editor_absoluteY="0dp"
+    tools:layout_editor_absoluteX="8dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cadastro de Treino "
+        android:layout_gravity="center"
+        android:textSize="30dp"
+        android:textColor="@color/colorPrimary"/>
+
+
+    <Spinner android:id="@+id/spNomeAluno"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        />
+
+    <Spinner android:id="@+id/spDia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spNomeAluno"
+        android:layout_marginTop="20dp"/>
+
+    <EditText
+        android:id="@+id/edtNomeExercicio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Digite o Exercicio"
+        android:layout_marginTop="12dp"/>
+
+    <EditText
+        android:id="@+id/edtSerie"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Qtd Séries"
+        android:layout_marginTop="12dp"/>
+
+    <EditText
+        android:id="@+id/edtRepeticao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Qtd Repetições"
+        android:layout_marginTop="12dp"/>
+
+    <EditText
+        android:id="@+id/edtIntervalo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Digite o Intervalo"
+        android:layout_marginTop="12dp"/>
+
+    <EditText
+        android:id="@+id/edtObservacao"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:inputType="text|textMultiLine"
+        android:gravity="top"
+        android:layout_marginTop="20dp"/>
+
+    <Button
+        android:id="@+id/btnCadastrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Cadastrar"
+        android:textColor="@color/TextoBranco"
+        android:background="@color/colorPrimary"
+        android:layout_marginTop="15dp"
+        />
+
+
+
+
+
+
+
+
+
+
+</LinearLayout>
+
+
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="codigoqr.fiap.com.br.leitordecodigo.Main2Activity"
+    tools:showIn="@layout/app_bar_main2">
+
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="380dp"
+        android:layout_height="480dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        tools:layout_editor_absoluteY="16dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent">
+
+
+        <ImageView
+            android:id="@+id/imgTreino"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:onClick="abrirTreino"
+            android:src="@drawable/peso"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="60dp"
+
+            />
+        <TextView android:id="@+id/txtTreino"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="100dp"
+            android:layout_below="@id/imgTreino"
+            android:textSize="15dp"
+            android:layout_marginLeft="60dp"
+            android:text="Meus Treinos"/>
+
+        <ImageView
+            android:id="@+id/imgInformacoes"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:onClick="abrirMinhasInformacao"
+            android:src="@drawable/balanca"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="60dp"
+            android:layout_toRightOf="@id/imgTreino"
+
+            />
+
+        <TextView android:id="@+id/txtInformacoes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imgTreino"
+            android:gravity="center"
+            android:layout_marginLeft="220dp"
+            android:textSize="15dp"
+            android:text="Minhas Informacões"
+            />
+
+        <ImageView
+            android:id="@+id/imgUnidades"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/localizacao"
+            android:onClick="abrirUnidades"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="60dp"
+            android:layout_below="@+id/imgTreino"
+
+            />
+
+        <TextView android:id="@+id/txtUnidades"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="100dp"
+            android:layout_below="@id/imgUnidades"
+            android:textSize="15dp"
+            android:layout_marginLeft="70dp"
+            android:text="Unidades"/>
+
+        <ImageView
+            android:id="@+id/imgDieta"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/comida"
+            android:onClick="abrirDieta"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="270dp"
+            android:layout_toRightOf="@id/imgUnidades"
+
+            />
+        <TextView android:id="@+id/txtDieta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imgDieta"
+            android:gravity="center"
+            android:layout_marginLeft="240dp"
+            android:textSize="15dp"
+            android:text="Minha Dieta"
+            />
+
+
+
+
+
+
+
+
+
+    </RelativeLayout>
+
+
+</android.support.constraint.ConstraintLayout>

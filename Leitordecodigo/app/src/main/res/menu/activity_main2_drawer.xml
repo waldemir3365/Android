@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_camera"
+            android:title="Minha Conta" />
+        <item
+            android:id="@+id/nav_gallery"
+            android:title="Meus Treinos" />
+        <item
+            android:id="@+id/nav_slideshow"
+            android:title="Minha Dieta" />
+        <item
+            android:id="@+id/nav_manage"
+            android:title="Unidades" />
+    </group>
+
+    <item android:title="Communicação">
+        <menu>
+            <item
+                android:id="@+id/nav_Logout"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Logout" />
+            <item
+                android:id="@+id/nav_codigoQr"
+                android:icon="@drawable/ic_menu_camera"
+                android:title="Gerar QR" />
+        </menu>
+    </item>
+
+</menu>
