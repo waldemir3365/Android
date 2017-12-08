@@ -12,32 +12,31 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:theme="@style/ThemeOverlay.AppCompat.Dark">
 
-    
+
     <de.hdodenhof.circleimageview.CircleImageView
         android:layout_width="90dp"
         android:layout_height="75dp"
-        android:src="@drawable/aluno"
+        android:src="@drawable/professor"
         android:paddingTop="@dimen/nav_header_vertical_spacing"
         app:civ_border_width="3dp"
         app:civ_border_color="#D3D3D3"
         android:layout_gravity=""
         />
-    
 
     <TextView
-        android:id="@+id/a"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingTop="@dimen/nav_header_vertical_spacing"
-        android:text="Aluno Gomes da Silva"
+        android:text="Rodrigo Alves Santos"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
     <TextView
-
-        android:id="@+id/b"
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
-        android:text="Aluno@fitness.com" />
+        android:text="Professor@fitness.com" />
+
+
 
 </LinearLayout>

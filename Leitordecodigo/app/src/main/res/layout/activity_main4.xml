@@ -29,17 +29,11 @@
         android:layout_marginTop="20dp"
         />
 
-    <Spinner android:id="@+id/spDia"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/spNomeAluno"
-        android:layout_marginTop="20dp"/>
-
     <EditText
         android:id="@+id/edtNomeExercicio"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Digite o Exercicio"
+        android:hint="Digite o Tipo de Treino"
         android:layout_marginTop="12dp"/>
 
     <EditText
@@ -77,6 +71,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:text="Cadastrar"
+        android:onClick="cadastrar"
         android:textColor="@color/TextoBranco"
         android:background="@color/colorPrimary"
         android:layout_marginTop="15dp"

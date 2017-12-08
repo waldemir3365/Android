@@ -7,12 +7,23 @@
     tools:context="codigoqr.fiap.com.br.leitordecodigo.Main5Activity">
     
     
-    
-    <ImageView
-        android:layout_width="300dp"
-        android:layout_height="500dp"
-        android:background="@drawable/dieta"
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="368dp"
+        android:layout_height="551dp"
         tools:layout_editor_absoluteY="8dp"
-        tools:layout_editor_absoluteX="8dp" />
+        tools:layout_editor_absoluteX="8dp">
+
+
+        <ImageView
+            android:layout_width="350dp"
+            android:layout_height="500dp"
+            android:background="@drawable/dieta4"
+            tools:layout_editor_absoluteY="8dp"
+            tools:layout_editor_absoluteX="8dp" />
+
+
+
+    </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

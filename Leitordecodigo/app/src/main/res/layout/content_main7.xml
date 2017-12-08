@@ -5,8 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="codigoqr.fiap.com.br.leitordecodigo.Main2Activity"
-    tools:showIn="@layout/app_bar_main2">
+    tools:context="codigoqr.fiap.com.br.leitordecodigo.Main7Activity"
+    tools:showIn="@layout/app_bar_main7">
 
 
     <RelativeLayout
@@ -22,11 +22,11 @@
 
         <ImageView
             android:id="@+id/imgTreino"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:onClick="abrirTreino"
-            android:src="@drawable/peso"
-            android:layout_marginLeft="30dp"
+            android:layout_width="118dp"
+            android:layout_height="140dp"
+            android:onClick="abrirCadastro"
+            android:src="@drawable/comida2"
+            android:layout_marginLeft="50dp"
             android:layout_marginTop="60dp"/>
 
         <TextView android:id="@+id/txtTreino"
@@ -35,8 +35,8 @@
             android:layout_marginRight="100dp"
             android:layout_below="@id/imgTreino"
             android:textSize="15dp"
-            android:layout_marginLeft="60dp"
-            android:text="Meus Treinos"/>
+            android:layout_marginLeft="50dp"
+            android:text="Cadastrar Alunos"/>
 
         <ImageView
             android:id="@+id/imgInformacoes"
@@ -44,12 +44,11 @@
             android:layout_height="150dp"
             android:onClick="abrirMinhasInformacao"
             android:src="@drawable/balanca"
-            android:layout_marginLeft="25dp"
+            android:layout_marginLeft="35dp"
             android:layout_marginTop="60dp"
             android:layout_toRightOf="@id/imgTreino"
 
             />
-
         <TextView android:id="@+id/txtInformacoes"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -103,14 +102,8 @@
             />
 
 
-
-
-
-
-
-
-
     </RelativeLayout>
+
 
 
 </android.support.constraint.ConstraintLayout>

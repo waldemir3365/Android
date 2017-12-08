@@ -7,15 +7,146 @@
     tools:context="codigoqr.fiap.com.br.leitordecodigo.Main3Activity">
 
 
+    <RelativeLayout
 
-    <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="368dp"
         android:layout_height="551dp"
-        android:textSize="60dp"
-        android:text="Lista de Treino aluno"
+        android:orientation="vertical"
         tools:layout_editor_absoluteY="8dp"
-        tools:layout_editor_absoluteX="0dp" />
+        tools:layout_editor_absoluteX="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Meus Treinos "
+            android:layout_gravity="center"
+            android:textSize="30dp"
+            android:layout_marginLeft="80dp"
+            android:textColor="@color/colorPrimary"/>
+
+        <TextView
+        android:id="@+id/txtTipo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+        android:text="Tipo : "
+        android:textSize="30dp"/>
 
 
+        <TextView
+            android:id="@+id/txtT"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/txtTipo"
+            android:layout_marginTop="56dp"
+            android:textSize="26dp"
+            />
+
+
+        <TextView
+            android:id="@+id/txtSerie"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Serie : "
+            android:textSize="30dp"
+            android:layout_marginTop="15dp"
+            android:layout_below="@id/txtTipo"
+            />
+
+
+        <TextView
+            android:id="@+id/txtS"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/txtTipo"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="110dp"
+            android:textSize="26dp"
+            />
+
+
+        <TextView
+            android:id="@+id/txtRepeticao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reticoes :"
+            android:textSize="30dp"
+            android:layout_marginTop="15dp"
+            android:layout_below="@id/txtSerie"
+
+            />
+
+
+        <TextView
+            android:id="@+id/txtR"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/txtTipo"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="165dp"
+            android:textSize="26dp"
+            />
+
+
+
+        <TextView
+            android:id="@+id/txtIntervalo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Intervalo : "
+            android:layout_marginTop="15dp"
+            android:textSize="30dp"
+            android:layout_below="@id/txtRepeticao"
+            />
+
+
+        <TextView
+            android:id="@+id/txtI"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/txtTipo"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="222dp"
+            android:textSize="26dp"
+            />
+
+
+        <TextView
+            android:id="@+id/txtObservacao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Observacoes : "
+            android:textSize="30dp"
+            android:layout_marginTop="15dp"
+            android:layout_below="@id/txtIntervalo"
+            />
+
+
+        <TextView
+            android:id="@+id/txtO"
+            android:layout_width="300dp"
+            android:layout_height="160dp"
+            android:layout_marginTop="315dp"
+            android:textSize="20dp"
+            />
+
+
+
+        <Button
+        android:id="@+id/btnVideo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+        android:text="Scan"
+        android:onClick="video"
+        android:layout_gravity="center"
+            android:layout_marginLeft="130dp"
+            android:layout_below="@id/txtO"
+
+        />
+
+
+
+</RelativeLayout>
 
 </android.support.constraint.ConstraintLayout>

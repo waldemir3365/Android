@@ -1,6 +1,7 @@
 package codigoqr.fiap.com.br.leitordecodigo;
 
 import android.app.Activity;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.net.Uri;
@@ -8,6 +9,7 @@ import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AlertDialog;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -18,6 +20,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.zxing.BarcodeFormat;
@@ -32,7 +35,7 @@ public class Main2Activity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     final Activity activity = this;
-     private ImageView imgTreino;
+    private ImageView imgTreino;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,6 +57,8 @@ public class Main2Activity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+
     }
 
     @Override
@@ -81,9 +86,7 @@ public class Main2Activity extends AppCompatActivity
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
+
 
         return super.onOptionsItemSelected(item);
     }
@@ -100,37 +103,36 @@ public class Main2Activity extends AppCompatActivity
 
         if (id == R.id.nav_camera) {
 
+            // minhas informações
             // Handle the camera a
-            caixa();
+            mensagem2();
+
         } else if (id == R.id.nav_gallery) {
 
-            i = new Intent(Main2Activity.this,Main3Activity.class);
+            i = new Intent(Main2Activity.this, Main3Activity.class);
             startActivity(i);
+            //aqui tambem
 
         } else if (id == R.id.nav_slideshow) {
 
-            i = new Intent(Main2Activity.this,Main5Activity.class);
+            i = new Intent(Main2Activity.this, Main5Activity.class);
             startActivity(i);
 
         } else if (id == R.id.nav_manage) {
 
-            i = new Intent(Main2Activity.this,Main6Activity.class);
+            i = new Intent(Main2Activity.this, Main6Activity.class);
             startActivity(i);
 
 
         } else if (id == R.id.nav_Logout) {
 
-            i = new Intent(Main2Activity.this,MainActivity.class);
+            i = new Intent(Main2Activity.this, MainActivity.class);
             startActivity(i);
             finish();
 
         } else if (id == R.id.nav_codigoQr) {
 
-            i = new Intent(Main2Activity.this,Main7Activity.class);
-            startActivity(i);
-
-            //cameraQR();
-
+            caixa();
 
         }
 
@@ -140,99 +142,124 @@ public class Main2Activity extends AppCompatActivity
     }
 
 
-    // codigo para scanear um Codigo QR
+    public void abrirTreino(View v) {
 
+        Bundle b  = new Bundle();
+        b = getIntent().getExtras();
+        String o = b.get("nome").toString();
 
-    /*
-
-        public void cameraQR(){
-
-            IntentIntegrator integrator = new IntentIntegrator(activity);
-            integrator.setDesiredBarcodeFormats(IntentIntegrator.QR_CODE_TYPES);
-            integrator.setPrompt("Camera Scan");
-            integrator.setCameraId(0);
-            integrator.initiateScan();
-
-
-
-        }
-
-
-
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        IntentResult result = IntentIntegrator.parseActivityResult(requestCode,resultCode,data);
-        if(result != null){
-            if (result.getContents() !=  null){
-                alert(result.getContents());
-
-            }else{
-                alert("Scan cancelado");
-            }
-        }else{
-            super.onActivityResult(requestCode, resultCode, data);
-        }
-    }
-
-
-    private void alert(String msg){
-
-        Toast.makeText(getApplicationContext(),msg,Toast.LENGTH_LONG).show();
-        Uri uri  = Uri.parse(msg.toString());
-        Intent i = new Intent(Intent.ACTION_VIEW, uri);
+        Intent i = new Intent(getBaseContext(), Main3Activity.class);
+        i.putExtra("letra",o);
         startActivity(i);
+        Toast.makeText(this,"passado letra", Toast.LENGTH_SHORT).show();
+
     }
 
-    */
+    public void abrirDieta(View v) {
 
-
-
-
-
-    public void abrirTreino(View v){
-
-        Intent i  = new Intent(Main2Activity.this, Main3Activity.class);
+        Intent i = new Intent(Main2Activity.this, Main5Activity.class);
         startActivity(i);
 
     }
 
-    public void abrirDieta(View v){
+    public void abrirUnidades(View v) {
 
-        Intent i  = new Intent(Main2Activity.this, Main5Activity.class);
+        Intent i = new Intent(Main2Activity.this, Main6Activity.class);
         startActivity(i);
 
     }
 
+    public void abrirMinhasInformacao(View v) {
 
-    public void abrirUnidades(View v){
-
-        Intent i  = new Intent(Main2Activity.this, Main6Activity.class);
-        startActivity(i);
-
-    }
-
-    public void abrirMinhasInformacao(View v){
-
-
-        caixa();
-
+            mensagem();
 
     }
 
 
-    public void caixa(){
+    public void mensagem2(){
 
-        AlertDialog.Builder b  = new AlertDialog.Builder(this);
+        AlertDialog.Builder c = new AlertDialog.Builder(this);
+        c.setTitle("Minha Conta");
+        c.setIcon(android.R.drawable.ic_dialog_info);
+        c.setMessage("Seu Plano atualmente é de : R$ 120,00 reais ");
 
-        b.setTitle("Minhas Informações");
-        b.setIcon(android.R.drawable.btn_star_big_on);
-        b.setMessage("Plano Mensal : R$ 60,00 reais");
-
-
-
-        AlertDialog a  = b.create();
+        AlertDialog a = c.create();
         a.show();
 
     }
 
-}
+
+    public void mensagem(){
+
+
+        Bundle b  = new Bundle();
+        b = getIntent().getExtras();
+
+        String nome = b.get("nome").toString();
+        String login =b.get("login").toString();
+        String objetivo = b.get("objetivo").toString();
+
+
+        AlertDialog.Builder c = new AlertDialog.Builder(this);
+
+        c.setTitle("Informações");
+        c.setIcon(android.R.drawable.ic_dialog_info);
+        c.setMessage("Nome : " + " " + nome +  "\n" +
+                        "Login : " + " " + login + "\n" +
+                        "Objetivo : " + " " + objetivo + "\n");
+
+        AlertDialog a = c.create();
+
+        a.show();
+
+    }
+
+
+    public void caixa() {
+
+            Bundle b  = new Bundle();
+            b = getIntent().getExtras();
+
+            String texto = b.get("pagamento").toString();
+            MultiFormatWriter multiFormatWriter = new MultiFormatWriter();
+
+
+            try {
+
+                BitMatrix bitMatrix = multiFormatWriter.encode(texto, BarcodeFormat.QR_CODE, 200, 200);
+                BarcodeEncoder barcodeEncoder = new BarcodeEncoder();
+                Bitmap bitmap = barcodeEncoder.createBitmap(bitMatrix);
+
+                //imgQr.setImageBitmap(bitmap);
+
+
+                AlertDialog.Builder alertadd = new AlertDialog.Builder(this);
+
+
+                LayoutInflater factory = LayoutInflater.from(this);
+                final View view = factory.inflate(R.layout.sample, null);
+
+                ImageView img = (ImageView) view.findViewById(R.id.dialog_imageview);
+
+                img.setImageBitmap(bitmap);
+
+                alertadd.setView(view);
+
+                alertadd.setNeutralButton("OK!", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dlg, int sumthin) {
+
+                    }
+                });
+
+
+                alertadd.show();
+
+
+            } catch (WriterException e) {
+                e.printStackTrace();
+            }
+
+
+        }
+
+    }

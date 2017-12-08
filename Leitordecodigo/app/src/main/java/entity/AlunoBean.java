@@ -1,21 +1,21 @@
 package entity;
 
-import com.j256.ormlite.field.DatabaseField;
-import com.j256.ormlite.table.DatabaseTable;
-
 /**
- * Created by WaldemirGomesDeAndra on 23/10/2017.
+ * Created by WaldemirGomesDeAndra on 24/11/2017.
  */
-public class ProfessorBean {
+
+public class AlunoBean {
 
 
     private int id;
     private String nome;
     private String login;
     private String senha;
-    private String email;
+    private String objetivo;
+    private String pagamento;
 
-    public ProfessorBean() {}
+
+    public AlunoBean(){}
 
     public int getId() {
         return id;
@@ -49,18 +49,28 @@ public class ProfessorBean {
         this.senha = senha;
     }
 
-    public String getEmail() {
-        return email;
+    public String getObjetivo() {
+        return objetivo;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setObjetivo(String objetivo) {
+        this.objetivo = objetivo;
     }
+
+    public String getPagamento() {
+        return pagamento;
+    }
+
+    public void setPagamento(String pagamento) {
+        this.pagamento = pagamento;
+    }
+
 
 
     @Override
     public String toString(){
-        return nome.toString();
+        return nome.toString() + " " + login.toString() + senha.toString() + objetivo.toString() + pagamento.toString();
 
-        }
+    }
+
 }
